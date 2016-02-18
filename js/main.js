@@ -232,11 +232,11 @@ window.onload = function() {
 	    // game.debug.text(game.time.physicsElapsed, 32, 32);
 	    // game.debug.body(player);
 	    // game.debug.bodyInfo(player, 16, 24);
-	    game.debug.text("rNumber: "+rNumber, 50, 50);
+	    // game.debug.text("rNumber: "+rNumber, 50, 50);
 
-	    game.debug.text("lNumber: "+lNumber, 500, 50);
+	    // game.debug.text("lNumber: "+lNumber, 500, 50);
 
-	    game.debug.text("arr[number]: "+arr[lNumber], 300, 150);
+	    // game.debug.text("arr[number]: "+arr[lNumber], 300, 150);
 
 	}
 
