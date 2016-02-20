@@ -151,7 +151,7 @@ window.onload = function() {
 	function createEffect(){
 		//This function randomly creates an Effect and drops it randomly.
 		introText.visible = false;
-		rNumber = Math.floor((Math.random() * 5) + 1);
+		rNumber = Math.floor((Math.random() * 10) + 1);
 		
 		if(rNumber == 0){
 			effect = game.add.sprite(game.world.randomX, 0, 'rOne');
@@ -177,7 +177,8 @@ window.onload = function() {
 	function collisionHandler(_player, _effect) {
 
 		_effect.kill(); //destroy effect
-		if (rNumber == lNumber){
+		//if player choose the right rnumber
+		if (rNumber == lNumber || rNumber>5){//if rnumber is bigger than 5 it is right 
 			score ++; //increment score
 			if(score >4){
 				gameOver();
@@ -185,7 +186,7 @@ window.onload = function() {
 			lNumber = Math.floor((Math.random() * 5) + 1);			
 			latinNumber.text = 'collect roman number \n'+lNumber; //display new score
 		}
-		else {
+		else {//if player chooses the wrong number
 			score --;
 			if(score <=0){
 				gameOver();
